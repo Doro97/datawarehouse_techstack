@@ -5,8 +5,8 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     networks: 
       - airflow-backend
-    volumes:
-      - "airflow-backend:/var/lib/mysql"
+    #volumes:
+      #- "airflow-backend:/var/lib/mysql"
     env_file:
       - mysql.env
   airflow-engine:
