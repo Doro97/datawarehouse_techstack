@@ -10,6 +10,9 @@ For this project the data points extracted are specifically from the I80 freeway
 
 # Technologies used 
 i.	MySQL. The MySQL database in this project will focus on the extraction part of the pipeline. The different files obtained from the website are loaded into the MySQL database and converted into tables for analysis
+
 ii.	Data Build Tool (dbt).The dbt tool will be used to transform the obtained data in the warehouse. This is done by simply writing select statements. It acts as an orchestration layer on top of the data warehouse to improve and accelerate the data transformation process. It also has an in-built support for CI/CD pipelines to test models and stage them.
+
 iii.	Redash. This is a business intelligence tool that houses a robust range of capabilities. It can easily be integrated with data warehouses and write SQL queries to pull subsets of data for visualizations.
+
 iv.	Airflow. It is used to manage computational workflows and data processing pipelines. Scripts are written in Python and then scheduled to run at  regular intervals
