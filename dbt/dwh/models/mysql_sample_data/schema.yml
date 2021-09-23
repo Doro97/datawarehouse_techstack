@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: test
+    description: A sample dataset from the datawarehouse project
+    database: test
+    tables:
+      - name: richards
+        description: 'Details about the richards station'
+      
