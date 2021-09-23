@@ -16,8 +16,8 @@ services:
      init: true
      networks: 
       - airflow-backend
-     #volumes:
-      #- "airflow-engine:/root/airflow/"
+     volumes:
+      - "airflow-engine:/root/airflow/"
      ports:
       - "8080:8080"
      env_file:
