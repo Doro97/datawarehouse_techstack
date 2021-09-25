@@ -1,17 +1,9 @@
-with source as (
-  select * from {{ ref('stations_summary') }}
+with source_station_summary as (
+   select * from {{ source('stations_data','station_summary') }}
 ),
 
-stage_stations_summary as (
-  select
-    ID,
-    flow_99,
-    flow_max,
-    flow_median,
-    flow_total,
-    n_obs
-  from source
+final as (
+    select * from source_station_summary
 )
-select
-  *
-from stage_station_summary
+
+select * from final
