@@ -1,0 +1,1 @@
+SELECT * FROM stations_data.all_station_data;
