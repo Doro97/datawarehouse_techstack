@@ -1,28 +1,9 @@
-with source as (
-  select * from {{ ref('stations_details') }}
+with source_station_details as (
+   select * from {{ source('stations_data','i80_stations_details') }}
 ),
 
-stage_stations_details as (
-  select
-    ID,
-    Dir,
-    District,
-    County,
-    City,
-    State_PM,
-    Abs_PM,
-    Latitude,
-    Longitude,
-    stLength,
-    stType,
-    Lanes,
-    stName,
-    User_ID_1,
-    User_ID_2,
-    User_ID_3,
-    User_ID_4
-  from source
+final as (
+    select * from source_station_details
 )
-select
-  *
-from stage_stations_details
+
+select * from final
