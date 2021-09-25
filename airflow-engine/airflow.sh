@@ -10,7 +10,7 @@ if [ ! -f «$INIT_FILE» ]; then
     airflow initdb
     
     # This configuration is done only the first time
-    touch «$INIT_FILE»
+     #«$INIT_FILE»
 fi
 
 # Run the Airflow webserver and scheduler
