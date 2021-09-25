@@ -1,4 +1,3 @@
-# Airflow seems to crash with Python 3.8, it's important to use version 3.7 instead
 FROM python:3.7
 
 # Insql,crypto]’ mysql-connector-pythonstall and setup Airflow
