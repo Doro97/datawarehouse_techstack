@@ -1,0 +1,93 @@
+version: 2
+
+sources:
+  - name: stations_data
+    description: A database containing information about the stations along I80 Free Way
+    tables:
+      - name: all_station_data
+        description: 'This table contains the details about a sample of the stations derived from the larger dataset of all the stations'
+        columns: 
+          - name: timestamp
+            description: Time in UTC
+          - name: id
+            description: Primary key of the all_stations_data table
+          - name: flow1
+            description: The number of vehicles in lane 1 at a given time
+          - name: mph1
+            description: Average speed in lane 1 in miles per hour
+          - name: flow2
+            description: The number of vehicles in lane 2 at a given time
+          - name: mph2
+            description: Average speed in lane 2 in miles per hour
+          - name: flow3
+            description: The number of vehicles in lane 3 at a given time
+          - name: mph3
+            description: Average speed in lane 3 in miles per hour
+          - name: flow4
+            description: The number of vehicles in lane 4 at a given time
+          - name: mph4
+            description: Average speed in lane 4 in miles per hour
+          - name: flow5
+            description: The number of vehicles in lane 5 at a given time
+          - name: mph5
+            description: Average speed in lane 5 in miles per hour
+          - name: totalflow
+            description: The total number of vehicles within the given interval
+      - name: station_summary
+        description: 'This is a table containing summary of statistics from each station'
+        columns: 
+          - name: ID
+            description: Time in UTC
+          - name: flow_99
+            description: ''
+          - name: flow_max
+            description: Maximum flow
+          - name: flow_median
+            description: Median flow
+          - name: flow_total
+            description: Total flow
+          - name: n_obs
+            description: ''
+      - name: i80_stations_details
+        description: 'This contains the details about all the stations with regard to the geographical details of each station '
+        columns: 
+          - name: ID
+            description: Primary key of the all_stations_data table
+          - name: Fwy
+            description: Free Way Number
+          - name: Dir
+            description: Direction
+          - name: District
+            description: The district in which the station is found
+          - name: County
+            description: The county in which the station is found
+          - name: City
+            description: The city in which the station is found
+          - name: State_PM
+            description: ''
+          - name: Abs_PM
+            description: ''
+          - name: Latitude
+            description: The station's latitude 
+          - name: Longitude
+            description: The station's longitude 
+          - name: Length
+            description: ''
+          - name: Type
+            description: ''
+          - name: Lanes
+            description: The number of lanes in each station
+          - name: Name
+            description: The name of the station
+          - name: User_ID_1
+            description: ''
+          - name: User_ID_2
+            description: ''
+          - name: User_ID_3
+            description: ''
+          - name: User_ID_4
+            description: ''
+
+
+        
+      
